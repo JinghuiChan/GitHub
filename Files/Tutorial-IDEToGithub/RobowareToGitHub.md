@@ -31,7 +31,7 @@
    ```
    打开这个公钥，复制里面的东西，待用。
    * 设置GitHub SSH-Key
-   * 点击 右上角菜单 --> Setting --> SSH and GPG key --> New SSH key
+   * 进入GitHub页面，点击 右上角菜单 --> Setting --> SSH and GPG key --> New SSH key
    * 随意填写一个 Title， 并将上面复制的 Key 粘贴在 Key方框中。  
 ### 三、在GitHub中新建一个仓库
 ### 四、关联RoboWare Studio 与 GitHub
@@ -42,8 +42,11 @@
    ```
    * #### 添加过滤规则，避免上传不必要文件
    ``` 
+    cd ~/catkin_ws
     gedit .gitignore
-    打开文件后填入： 
+```
+ ##### 打开文件后填入：
+``` 
     build/
     devel/
     devel_isolated/
@@ -65,6 +68,13 @@
    > 此时本地库已经同步到GitHub上去了.  
 ### 五、在RoboWare Studio 中快速提交代码上传
    * #### 更改下文件，保存一下，就可以看到这里发生了变化：
+   ![快速代码提交](https://github.com/JinghuiChan/GitHub/blob/master/Pics/RobowareToGithub/roboware2github1.png)
+   
+> 这个base就是我们刚改动的文件。  
+
+> 在消息栏中填入本次改动的备注（随便写），点对号或ctrl+enter进行提交（对应命令：git commit）。  
+
+>之后在旁边的省略号下拉栏中点击推送，就可以把改动同步到云端了。（对应命令：git push origin）  
    
     
    
