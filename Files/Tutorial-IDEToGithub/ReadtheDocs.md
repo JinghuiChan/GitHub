@@ -99,7 +99,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 ##  预览效果  
 
 然后在更目录执行 `make html` ，进入 `build/html` 目录后用浏览器打开 `index.html`  
-![hello预览效果](https://github.com/JinghuiChan/GitHub/blob/master/Pics/RobowareToGithub/helloworld%E9%A2%84%E8%A7%88%E6%95%88%E6%9E%9C.png)  
+![hello预览效果](Pics/RobowareToGithub/helloworld预览效果.png)  
 
 toctree 支持多级目录,比如要想将python.rst,java.rst笔记在不同的目录,toctree这样设置:
 
