@@ -1,4 +1,4 @@
-# 使用ReadtheDocs托管文档
+# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用ReadtheDocs托管文档
 <hr>
 <br/>
 <br/>
@@ -13,9 +13,9 @@
 * GitBook，样式不好看，访问速度慢。  
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;经过比较最后锁定Sphinx + GitHub + ReadtheDocs 作为文档写作工具，用 Sphinx 生成文档，GitHub 托管文档，再导入到 ReadtheDocs。  
-##Sphinx
+## Sphinx  
 Sphinx是一个基于Python的文档生成项目，最早只是用来生成 Python 官方文档，随着工具的完善， 越来越多的知名的项目也用他来生成文档，甚至完全可以用他来写书采用了reStructuredText作为文档写作语言, 不过也可以通过模块支持其他格式，待会我会介绍怎样支持MarkDown格式。  
-##安装Sphinx
+## 安装Sphinx
 
 ```shell script
 pip install sphinx sphinx-autobuild sphinx_rtd_theme
@@ -23,7 +23,7 @@ pip install sphinx sphinx-autobuild sphinx_rtd_theme
 
 这一步时间会安装很多python依赖，耐心等等..
 
-##初始化
+## 初始化
 
 ```shell script
 # 创建文档根目录
@@ -83,7 +83,8 @@ Contents:
    hello
 ``` 
 
-##更改主题 sphinx_rtd_theme
+##  更改主题 sphinx_rtd_theme  
+
 更改source/conf.py:
 
 ```shell script
@@ -92,7 +93,8 @@ html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 ``` 
 
-##预览效果
+##  预览效果  
+
 然后在更目录执行 `make html` ，进入 `build/html` 目录后用浏览器打开 `index.html`  
 ![hello预览效果](https://github.com/JinghuiChan/GitHub/blob/master/Pics/RobowareToGithub/helloworld%E9%A2%84%E8%A7%88%E6%95%88%E6%9E%9C.png)  
 
@@ -109,7 +111,8 @@ Contents:
 
 注意中间的空行
 
-##支持markdown编写
+## 支持markdown编写  
+
 通过[recommonmark](https://recommonmark.readthedocs.io/en/latest/) 来支持markdown  
 ```shell script
 pip install recommonmark
@@ -124,7 +127,8 @@ source_parsers = {
 source_suffix = ['.rst', '.md']
 ```     
 
-##AutoStructify
+## AutoStructify  
+
 如果想使用高级功能，可以添加AutoStructify配置，在conf.py中添加:  
 ```shell script
 # At top on conf.py (with other import statements)
@@ -148,7 +152,8 @@ def setup(app):
 ### test markdown
 ```  
 再次运行`make html`后看效果，跟前面一样。  
-##GitHub托管
+## GitHub托管  
+
 &nbsp;&nbsp;&nbsp;&nbsp;一般的做法是将文档托管到版本控制系统比如github上面，push源码后自动构建发布到readthedoc上面， 这样既有版本控制好处，又能自动发布到readthedoc，实在是太方便了。  
 <br/>
 
@@ -167,10 +172,11 @@ def setup(app):
 我将自己以前博客里面的关于scrapy的文章都迁移至readthedoc，现在看看效果：  
 ![整体效果](https://github.com/JinghuiChan/GitHub/blob/master/Pics/RobowareToGithub/%E6%95%B4%E4%BD%93%E6%95%88%E6%9E%9C.png)  
 
-##生成PDF 
+## 生成PDF 
 
 首先要安装TeX Live，CentOS 7的yum库中的TeX Live版本比较老，所以直接安装官网上的版本。  
 在官网页面 下载安装包install-tl-unx.tar.gz  
+<br>
 先安装依赖包：  
 ```shell script
 apt install perl-Digest-MD5
@@ -187,13 +193,15 @@ Enter command: i
 
 ```   
 安装时间会比较长，我这里安装大概要50分钟左右，请耐心等待…  
+  
 安装完后配置PATH，在/etc/profile后面添加:  
 
 ```shell script
 export PATH=/usr/local/texlive/2016/bin/x86_64-linux:$PATH
 ```   
 
-注意上面的路径改成你自己正确的路径，然后执行source /etc/profile即可  
+注意上面的路径改成你自己正确的路径，然后执行source /etc/profile即可 
+
 如果要生成中文PDF，还需要确认安装了东亚语言包和字体包  
 
 ```shell script
@@ -234,8 +242,10 @@ make latexpdf
 * ReadTheDocs可以自动生成中文PDF，但ReadTheDocs服务器里的TeXLive版本太老， 导致只能使用pdflatex而不能使用xelatex编译，再加上服务器上中文字体的限制， 所以生成的PDF效果较差，故不采用ReadTheDocs生成的PDF
 * 本地安装TeXLive 2016，用xelatex编译，可生成更好效果的PDF，目前的策略是在本地生成PDF。  
 
-##FAQ
+## FAQ  
+
 build的时候出现错误：! Package inputenc Error: Unicode char 我 (U+6211)  
+
 解决办法，在conf.py中添加:  
 ```python
 latex_elements={# The paper size ('letterpaper' or 'a4paper').
@@ -263,7 +273,7 @@ WARNING: Pygments lexer name u’python run.py’ is not known
 
 <hr>
 
-WARNING: nonlocal image URI found  
+#### WARNING: nonlocal image URI found  
 解决办法，更改conf.py  
 
 ```python
@@ -316,7 +326,9 @@ two line
 
 #### 生成的pdf文件中，每个章节都多了一层编号  
 我猜测这个问题的原因是sphinx将rst转为LaTex文件，再转为PDF的。sphinx生成的LaTex文件中， 使用了\Section标记段落，默认情况下\Section是自动编号的章节，而\Section*才是不带自动编号的。  
+
 为了解决这个问题，需要手工编辑sphinx生成的python3-cookbook.tex  
+
 ```shell script
 cd build/latex/
 vi scrapy-cookbook.tex
@@ -324,20 +336,27 @@ scrapy-cookbook.tex
 ```  
 
 在`\setcounter{tocdepth}{2}`下增加一行 `\setcounter{secnumdepth}{-2}`  
-这行代码关闭了章节编号的计数器，这样生成的PDF就是目录正确且章节不带自动编号。 请注意别乱动里面的东西，删除一个空行也不行。  
+
+这行代码关闭了章节编号的计数器，这样生成的PDF就是目录正确且章节不带自动编号。 请注意别乱动里面的东西，删除一个空行也不行.  
+
 然后执行命令：  
+
 ```shell script
 xelatex scrapy-cookbook.tex
 ``` 
 
 这时候生成的pdf文件就是正常格式的了。如果一次执行不成功就再执行一次，很奇怪的事情。  
+
 具体原理解释参见<http://liam0205.me/2015/04/10/how-to-list-unnumbered-section-in-the-table-of-contents/>  
+
+<hr>
 
 #### 优化PDF显示
 
 这个参考 <https://github.com/yidao620c/python3-cookbook/issues/108>  
 
 编辑tex文件，在导言区的内容如下：  
+
 ```shell script
 前面省略...
 \title{《Python Cookbook》第三版}
@@ -394,12 +413,16 @@ xelatex scrapy-cookbook.tex
 ```  
 
 在 `\section{第一章：数据结构和算法}` 前插入 `\normaltocdepth`  
+
 在 `\section{附录A}` 前插入 `\specialtocdepth`  
+
 另外执行下面命令，删除每个章节多余的Contents和下面的一行空格：  
+
 ```shell script
 sed -i '/Contents:/,+1 d' python3-cookbook.tex
 ```  
 再次运行生成命令即可(最好执行2次)：  
+
 ```shell script
 xelatex python3-cookbook.tex
 ```
