@@ -3,16 +3,16 @@
 <br/>
 <br/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Read the Docs是一个在线文档托管服务， 你可以从各种版本控制系统中导入文档，如果你使用webhooks， 那么每次提交代码后可以自动构建并上传至readthedocs网站，非常方便。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read the Docs是一个在线文档托管服务， 你可以从各种版本控制系统中导入文档，如果你使用webhooks， 那么每次提交代码后可以自动构建并上传至readthedocs网站，非常方便。
 <br/>  
-&nbsp;&nbsp;&nbsp;&nbsp;一般来讲，这个非常适合写软件文档以及编写一些教程、电子书之类。对于一些一两篇文章就能写清楚的可以记笔记或写博客， 但是如果要写成一个系列的，不如写成一本书的形式，更美观，也更系统。  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一般来讲，这个非常适合写软件文档以及编写一些教程、电子书之类。对于一些一两篇文章就能写清楚的可以记笔记或写博客， 但是如果要写成一个系列的，不如写成一本书的形式，更美观，也更系统。  
 <br/>
 现有的写电子书的方式，有以下几个解决方案，优劣势也很明显：
 * 写博客，跟散文堆在一起，不便索引。  
 * GitHub Wiki，适合做知识整理，但排版一般，不方便查看。
 * GitBook，样式不好看，访问速度慢。  
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;经过比较最后锁定Sphinx + GitHub + ReadtheDocs 作为文档写作工具，用 Sphinx 生成文档，GitHub 托管文档，再导入到 ReadtheDocs。  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经过比较最后锁定Sphinx + GitHub + ReadtheDocs 作为文档写作工具，用 Sphinx 生成文档，GitHub 托管文档，再导入到 ReadtheDocs。  
 
 ## Sphinx  
 
