@@ -99,7 +99,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 ##  预览效果  
 
 然后在更目录执行 `make html` ，进入 `build/html` 目录后用浏览器打开 `index.html`  
-![hello预览效果](https://github.com/JinghuiChan/GitHub/blob/master/Pics/RobowareToGithub/helloworld%E9%A2%84%E8%A7%88%E6%95%88%E6%9E%9C.png)  
+![hello预览效果](Pics/RobowareToGithub/helloworld预览效果.png)  
 
 toctree 支持多级目录,比如要想将python.rst,java.rst笔记在不同的目录,toctree这样设置:
 
@@ -169,7 +169,9 @@ def setup(app):
 * 其他项目根据自己的需要填写后点击 “Create”，创建完后会自动去激活Webhooks，不用再去GitHub设置
 * 一切搞定，从此只要你往这个仓库push代码，readthedoc上面的文档就会自动更新.  
 注：在创建read the docs项目时候，语言选择”Simplified Chinese”  
-在构建过程中出现任何问题，都可以登录readthedoc找到项目中的”构建”页查看构建历史，点击任何一条查看详细日志:   
+
+在构建过程中出现任何问题，都可以登录readthedoc找到项目中的”构建”页查看构建历史，点击任何一条查看详细日志:  
+
 ![日志详细](https://github.com/JinghuiChan/GitHub/blob/master/Pics/RobowareToGithub/%E6%97%A5%E5%BF%97.png)  
 
 我将自己以前博客里面的关于scrapy的文章都迁移至readthedoc，现在看看效果：  
