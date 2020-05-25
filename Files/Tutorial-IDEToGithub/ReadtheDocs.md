@@ -170,7 +170,7 @@ def setup(app):
 * 一切搞定，从此只要你往这个仓库push代码，readthedoc上面的文档就会自动更新.  
 注：在创建read the docs项目时候，语言选择”Simplified Chinese”  
 在构建过程中出现任何问题，都可以登录readthedoc找到项目中的”构建”页查看构建历史，点击任何一条查看详细日志:   
-![日志详细](https://github.com/JinghuiChan/GitHub/tree/master/Pics/RobowareToGithub)  
+![日志详细](https://github.com/JinghuiChan/GitHub/blob/master/Pics/RobowareToGithub/%E6%97%A5%E5%BF%97.png)  
 
 我将自己以前博客里面的关于scrapy的文章都迁移至readthedoc，现在看看效果：  
 ![整体效果](https://github.com/JinghuiChan/GitHub/blob/master/Pics/RobowareToGithub/%E6%95%B4%E4%BD%93%E6%95%88%E6%9E%9C.png)  
