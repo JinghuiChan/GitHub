@@ -7,7 +7,7 @@
 <br/>  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一般来讲，这个非常适合写软件文档以及编写一些教程、电子书之类。对于一些一两篇文章就能写清楚的可以记笔记或写博客， 但是如果要写成一个系列的，不如写成一本书的形式，更美观，也更系统。  
 <br/>
-现有的写电子书的方式，有以下几个解决方案，优劣势也很明显：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现有的写电子书的方式，有以下几个解决方案，优劣势也很明显：
 * 写博客，跟散文堆在一起，不便索引。  
 * GitHub Wiki，适合做知识整理，但排版一般，不方便查看。
 * GitBook，样式不好看，访问速度慢。  
@@ -16,7 +16,7 @@
 
 ## Sphinx  
 
-Sphinx是一个基于Python的文档生成项目，最早只是用来生成 Python 官方文档，随着工具的完善， 越来越多的知名的项目也用他来生成文档，甚至完全可以用他来写书采用了reStructuredText作为文档写作语言, 不过也可以通过模块支持其他格式，待会我会介绍怎样支持MarkDown格式。  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sphinx是一个基于Python的文档生成项目，最早只是用来生成 Python 官方文档，随着工具的完善， 越来越多的知名的项目也用他来生成文档，甚至完全可以用他来写书采用了reStructuredText作为文档写作语言, 不过也可以通过模块支持其他格式，待会我会介绍怎样支持MarkDown格式。  
 
 ## 安装Sphinx  
 
@@ -157,10 +157,10 @@ def setup(app):
 再次运行`make html`后看效果，跟前面一样。  
 ## GitHub托管  
 
-&nbsp;&nbsp;&nbsp;&nbsp;一般的做法是将文档托管到版本控制系统比如github上面，push源码后自动构建发布到readthedoc上面， 这样既有版本控制好处，又能自动发布到readthedoc，实在是太方便了。  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一般的做法是将文档托管到版本控制系统比如github上面，push源码后自动构建发布到readthedoc上面， 这样既有版本控制好处，又能自动发布到readthedoc，实在是太方便了。  
 <br/>
 
-先在GitHub创建一个仓库名字叫scrapy-cookbook， 然后在本地.gitignore文件中添加build/目录，初始化git，commit后，添加远程仓库。  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;先在GitHub创建一个仓库名字叫scrapy-cookbook， 然后在本地.gitignore文件中添加build/目录，初始化git，commit后，添加远程仓库。  
 <br/>  
 具体几个步骤非常简单，参考官方文档：<https://github.com/rtfd/readthedocs.org>:  
 * 在Read the Docs上面注册一个账号
@@ -170,7 +170,7 @@ def setup(app):
 * 一切搞定，从此只要你往这个仓库push代码，readthedoc上面的文档就会自动更新.  
 注：在创建read the docs项目时候，语言选择”Simplified Chinese”  
 
-在构建过程中出现任何问题，都可以登录readthedoc找到项目中的”构建”页查看构建历史，点击任何一条查看详细日志:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在构建过程中出现任何问题，都可以登录readthedoc找到项目中的”构建”页查看构建历史，点击任何一条查看详细日志:  
 
 ![日志详细](https://github.com/JinghuiChan/GitHub/blob/master/Pics/RobowareToGithub/%E6%97%A5%E5%BF%97.png)  
 
