@@ -14,8 +14,10 @@
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;经过比较最后锁定Sphinx + GitHub + ReadtheDocs 作为文档写作工具，用 Sphinx 生成文档，GitHub 托管文档，再导入到 ReadtheDocs。  
 ## Sphinx  
+
 Sphinx是一个基于Python的文档生成项目，最早只是用来生成 Python 官方文档，随着工具的完善， 越来越多的知名的项目也用他来生成文档，甚至完全可以用他来写书采用了reStructuredText作为文档写作语言, 不过也可以通过模块支持其他格式，待会我会介绍怎样支持MarkDown格式。  
-## 安装Sphinx
+
+## 安装Sphinx  
 
 ```shell script
 pip install sphinx sphinx-autobuild sphinx_rtd_theme
